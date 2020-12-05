@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Add </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">GammaTechnology</h5>
+</div>
+<div class="container mt-5 mb-5">
+ <h3>
+     Добавить статью
+ </h3>
+ <form method="post" action="/Add" enctype="multipart/form-data" >
+     <div>
+         <input type="text" placeholder="ФИО" name="FIO" >
+     </div>
+     <div>
+         <input type="text" name="Subject" placeholder="Дисциплина" >
+     </div>
+     <div>
+         <input type="text" placeholder="Тема" name="Topic" >
+     </div>
+    <div>
+        <textarea name="Content" placeholder="Текст статьи" cols="100" ></textarea>
+    </div>
+     <button type="submit" class="btn btn-success"> Добавить Статью </button>
+</form>
+</div>
+</body>
+</html>
