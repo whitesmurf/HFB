@@ -14,6 +14,6 @@ public class SingInController {
 
     @PutMapping("/blog/singin")
     public String PostSingin(){
-        return "redirect:/homepage";
+        return "redirect:/blog/add";
     }
 }

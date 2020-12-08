@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class AddController  {
 
-    @GetMapping("/Add")
+    @GetMapping("/blog/add")
     public String Add(){
         return "Add";
     }
