@@ -1,9 +1,6 @@
 package com.HelpForBlind.HFB.Controllers.Models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class BlindUsers {
@@ -15,6 +12,15 @@ public class BlindUsers {
 
     public long getId() {
         return id;
+    }
+
+    public BlindUsers() {
+    }
+
+    public BlindUsers(String userName, String password, String email) {
+        UserName = userName;
+        this.password = password;
+        this.email = email;
     }
 
     public void setId(long id) {
