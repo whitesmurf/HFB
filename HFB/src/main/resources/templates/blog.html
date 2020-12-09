@@ -10,10 +10,11 @@
      <h5 class="my-0 mr-md-auto font-weight-normal">GammaTechnology</h5>
  </div>
  <div class="container mt-5">
-     <h3> Статьи </h3>
-     <div class="alert alert-info mt-2">
-        <p>Тут будет вывод статьей</p>
-     </div>
+     <h1> Статьи </h1>
+    <div th:each="el: ${article}" class="alert alert-info mt-2">
+        <h3 th:text="${el.subject}+ . + ${el.FIO}"></h3>
+        <a th:href="'/blog' + ${el.id}" class="btn btn-warning">Get More</a>
+    </div>
  </div>
  </body>
 </html>

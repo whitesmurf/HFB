@@ -1,5 +1,8 @@
 package com.HelpForBlind.HFB.Controllers.Models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GeneratorType;
 
 import javax.persistence.Entity;
@@ -7,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@NoArgsConstructor
+@Data
 @Entity
 public class Articles {
 
@@ -14,7 +19,14 @@ public class Articles {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
 
-    private String FIO,Subject,Topic,Text;
+    private String FIO,subject,topic,text;
+
+    public Articles(String FIO, String subject, String topic, String text) {
+        this.FIO = FIO;
+        this.subject = subject;
+        this.topic = topic;
+        this.text = text;
+    }
 
     public long getId() {
         return id;
@@ -33,26 +45,26 @@ public class Articles {
     }
 
     public String getSubject() {
-        return Subject;
+        return subject;
     }
 
     public void setSubject(String subject) {
-        Subject = subject;
+        this.subject = subject;
     }
 
     public String getTopic() {
-        return Topic;
+        return topic;
     }
 
     public void setTopic(String topic) {
-        Topic = topic;
+        this.topic = topic;
     }
 
     public String getText() {
-        return Text;
+        return text;
     }
 
     public void setText(String text) {
-        Text = text;
+        this.text = text;
     }
 }
