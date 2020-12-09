@@ -10,8 +10,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class SingUpController {
+
+    private final BlindUsersRepos blindUsersRepos;
+
     @Autowired
-    private BlindUsersRepos blindUsersRepos;
+    public SingUpController(BlindUsersRepos blindUsersRepos){
+        this.blindUsersRepos = blindUsersRepos;
+    }
 
     @GetMapping("/singup")
     public String SingUp(){

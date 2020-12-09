@@ -15,17 +15,22 @@ import java.util.Optional;
 @Controller
 public class SingInController {
 
+
+     private final BlindUsersRepos blindUsersRepos;
     @Autowired
-     private BlindUsersRepos blindUsersRepos;
+    public SingInController(BlindUsersRepos blindUsersRepos){
+        this.blindUsersRepos = blindUsersRepos;
+    }
 
     @GetMapping("/singin")
     public String SingIn(){
         return "SingIn";
     }
 
-    @PostMapping("/singin")
-    public String PostSingin(@RequestParam String email,@RequestParam String password){
-        blindUsersRepos.findBlindUsersByEmail(email);
-        return "Add";
+    @PostMapping("singin")
+    public String PostSingIn(@RequestParam String email,@RequestParam String password){
+        if(blindUsersRepos.findBlindUsersByEmail(email).get().getPassword().equals(password))return "redirect:/blog/add";
+        else
+        return "SingIn";
     }
 }
