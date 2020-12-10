@@ -26,7 +26,7 @@ public class AddController  {
         Articles article = new Articles(FIO,subject,topic,content);
            articlesRepos.save(article);
 
-            return "redirect:blog";
+            return "redirect:/blog";
     }
 
 

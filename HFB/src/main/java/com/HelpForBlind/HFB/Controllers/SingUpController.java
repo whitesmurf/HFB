@@ -22,7 +22,7 @@ public class SingUpController {
     public String SingUp(){
         return "SingUP";
     }
-    @PostMapping("/singup")
+    @PostMapping("reg")
     private String AddUser(@RequestParam String UserName,@RequestParam String password,@RequestParam String email){
        BlindUsers BlindUser = new BlindUsers(UserName,password,email);
         blindUsersRepos.save(BlindUser);
