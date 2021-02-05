@@ -1,4 +1,4 @@
 package com.HelpForBlind.HFB.Controllers;
 
-public class SingInController {
+public class CabinetController {
 }

@@ -18,7 +18,7 @@ public class SingUpController {
         this.blindUsersRepos = blindUsersRepos;
     }
 
-    @GetMapping("/singup")
+    @GetMapping("/singUp")
     public String SingUp(){
         return "SingUP";
     }
