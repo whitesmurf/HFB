@@ -8,7 +8,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-/*@Service
+import java.util.Optional;
+
+@Service
 public class BlindUserDEtailsServiceImpl implements UserDetailsService {
 
     private final BlindUsersRepos BLindUserRepository;
@@ -20,8 +22,8 @@ public class BlindUserDEtailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        BlindUsers blindUser = BLindUserRepository.findBlindUsersByEmail(email).orElseThrow(()-> new UsernameNotFoundException("user don't exists"));
-        return BlindUserDetails.fromUser(blindUser);
+        Optional<BlindUsers> blindUser = BLindUserRepository.findBlindUsersByEmail(email);
+        blindUser.orElseThrow(() -> new UsernameNotFoundException(email));
+        return blindUser.map(BlindUserDetails::new).get();
     }
 }
-*/
