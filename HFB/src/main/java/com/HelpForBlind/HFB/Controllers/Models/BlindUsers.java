@@ -20,10 +20,12 @@ public class BlindUsers {
     public BlindUsers() {
     }
 
-    public BlindUsers(String userName, String password, String email) {
+    public BlindUsers(String userName, String password, String email,Role role,Status status) {
         this.username = userName;
         this.password = password;
         this.email = email;
+        this.status = status;
+        this.role = role;
     }
 
 }

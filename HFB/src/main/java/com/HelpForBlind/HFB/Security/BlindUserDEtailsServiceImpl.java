@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-@Service
+/*@Service
 public class BlindUserDEtailsServiceImpl implements UserDetailsService {
 
     private final BlindUsersRepos BLindUserRepository;
@@ -24,3 +24,4 @@ public class BlindUserDEtailsServiceImpl implements UserDetailsService {
         return BlindUserDetails.fromUser(blindUser);
     }
 }
+*/

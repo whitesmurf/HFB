@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -20,20 +22,21 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-
+/*
     private final UserDetailsService userDetailsService;
 
     @Autowired
     public SecurityConfiguration(@Qualifier("blindUserDEtailsServiceImpl") UserDetailsService userDetailsService){
         this.userDetailsService =userDetailsService;
     }
-
+*/
     @Override
     protected void configure(HttpSecurity http) throws Exception{
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/SingUp","/" ).permitAll()
+                .antMatchers("/singUp","/" ).permitAll()
+                .antMatchers("/blog").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
@@ -41,7 +44,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .loginPage("/signIn").permitAll()
                 .and()
                 .logout()
-                .logoutRequestMatcher(new AntPathRequestMatcher("logout","POST"))
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout","POST"))
+                .logoutSuccessUrl("/")
                 .invalidateHttpSession(true)
                 .clearAuthentication(true)
                 .deleteCookies("JSESSIONID")
@@ -49,10 +53,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         ;
     }
 
-    @Override
+    /*@Override
     protected void configure( AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception{
-        authenticationManagerBuilder.authenticationProvider(daoAuthenticationProvider());
-    }
+        //authenticationManagerBuilder.authenticationProvider(daoAuthenticationProvider());
+    }*/
 
     @Bean
     public PasswordEncoder getPasswordEncoder(){
@@ -60,11 +64,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
 
-    @Bean
+    /*@Bean
     protected DaoAuthenticationProvider daoAuthenticationProvider() {
         DaoAuthenticationProvider daoAuthenticationProvider=new DaoAuthenticationProvider();
         daoAuthenticationProvider.setPasswordEncoder(getPasswordEncoder());
         daoAuthenticationProvider.setUserDetailsService(userDetailsService);
         return daoAuthenticationProvider;
+    }*/
+/*
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception{
+        return super.authenticationManagerBean();
     }
-}
+*/}

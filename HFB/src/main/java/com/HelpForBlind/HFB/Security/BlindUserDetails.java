@@ -12,13 +12,13 @@ import java.util.List;
 @Data
 public class BlindUserDetails implements UserDetails {
 
-    private final String username ;
+    private final String email ;
     private final String  password ;
     private final List<GrantedAuthority> authorityList ;
     private final boolean isActive;
 
-    public BlindUserDetails(String username, String password, List<GrantedAuthority> authorityList, boolean isActive) {
-        this.username = username;
+    public BlindUserDetails(String email, String password, List<GrantedAuthority> authorityList, boolean isActive) {
+        this.email = email;
         this.password = password;
         this.authorityList = authorityList;
         this.isActive = isActive;
@@ -36,7 +36,7 @@ public class BlindUserDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return username;
+        return email;
     }
 
     @Override
@@ -59,15 +59,15 @@ public class BlindUserDetails implements UserDetails {
         return isActive;
     }
 
-    public static UserDetails fromUser(BlindUsers pwnUserEntity){
+    public static UserDetails fromUser(BlindUsers blindUsers){
         return new org.springframework.security.core.userdetails.User(
-                pwnUserEntity.getUsername(),
-                pwnUserEntity.getPassword(),
-                pwnUserEntity.getStatus().equals((Status.ACTIVE)),
-                pwnUserEntity.getStatus().equals((Status.ACTIVE)),
-                pwnUserEntity.getStatus().equals((Status.ACTIVE)),
-                pwnUserEntity.getStatus().equals((Status.ACTIVE)),
-                pwnUserEntity.getRole().getAuthorities()
+                blindUsers.getEmail(),
+                blindUsers.getPassword(),
+                blindUsers.getStatus().equals((Status.ACTIVE)),
+                blindUsers.getStatus().equals((Status.ACTIVE)),
+                blindUsers.getStatus().equals((Status.ACTIVE)),
+                blindUsers.getStatus().equals((Status.ACTIVE)),
+                blindUsers.getRole().getAuthorities()
         );
 
     }
