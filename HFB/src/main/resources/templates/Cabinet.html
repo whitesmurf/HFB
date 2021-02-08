@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>OwnCabinet</title>
+    <link rel="stylesheet" href="" th:href="@{/css/HFBCabinetStyle.css}">
 </head>
-    <body>
-        something
-        <form action="logout" method="post">
-            <button type="submit">logout</button>
-        </form>
-    </body>
+<body>
+<header class="header">
+    <h3 class="sm">@GammaTechnology</h3>
+    <a class="link" href="https://tproger.ru/translations/how-css-flexbox-works/">Articles</a>
+    <form action="logout" method="post">
+        <button class="btn" type="submit">logout</button>
+    </form>
+</header>
+<main>
+    <div class="information">
+        <div class="about">
+            <p>Name:</p>
+            <p>Surmane:</p>
+            <p>Email:</p>
+            <p>Role:</p>
+            <p>Status:</p>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="year"><b>@2020</b></div>
+</footer>
+</body>
 </html>

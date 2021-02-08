@@ -1,33 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title> Add </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/AddArticleStyle.css}">
 </head>
 <body>
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-    <h5 class="my-0 mr-md-auto font-weight-normal">GammaTechnology</h5>
-</div>
-<div class="container mt-5 mb-5" align="center">
- <h3>
-     Добавить статью
- </h3>
- <form method="post" action="/Add" enctype="multipart/form-data" >
-     <div>
-         <input type="text" placeholder="ФИО" name="FIO" >
-     </div>
-     <div>
-         <input type="text" name="subject" placeholder="Дисциплина" >
-     </div>
-     <div>
-         <input type="text" placeholder="Тема" name="topic" >
-     </div>
-    <div>
-        <textarea name="content" placeholder="Текст статьи" cols="100" ></textarea>
-    </div>
-     <button type="submit" class="btn btn-success"> Добавить Статью </button>
-</form>
-</div>
+<header class="header">
+    <p class="sm">@GammaTechnology</p>
+</header>
+<main>
+    <form method="post" action="/Add" class="form" >
+        <div class="input">
+            <h3>Добавить статью</h3>
+            <input type="text" placeholder="ФИО" name="FIO" >
+            <input type="text" name="subject" placeholder="Дисциплина" >
+            <input type="text" placeholder="Тема" name="topic" >
+            <textarea name="content" placeholder="Текст статьи" ></textarea>
+            <button type="submit" class="btn"> Добавить Статью </button>
+        </div>
+    </form>
+</main>
+<footer class="footer">
+    <div class="year">@2020</div>
+</footer>
 </body>
 </html>

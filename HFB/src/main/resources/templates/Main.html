@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title> Homepage </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href=""  th:href="@{/css/MainPageStyle.css}">
 </head>
 <body>
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-    <h5 class="my-0 mr-md-auto font-weight-normal">GammaTechnology</h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" href="/blog">Articles</a>
-    </nav>
-    <a class="btn btn-outline-primary" href="/signIn">Sign in</a>
-
-</div>
+<header class="header">
+    <h3 class="sm">@GammaTechnology</h3>
+    <a class="link" href="/blog">Articles</a>
+    <button class="button" href="/signIn">Sign In</button>
+</header>
+<main class= "main">
+</main>
+<footer class="footer">
+    <div class="year"><b>@2020</b></div>
+</footer>
 
 </body>
 </html>

@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title> articles </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="" th:href="@{/css/HFBBlogStyle.css}">
 </head>
- <body>
- <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-     <h5 class="my-0 mr-md-auto font-weight-normal">GammaTechnology</h5>
- </div>
- <div class="container mt-5">
-     <h1> Статьи </h1>
-    <div th:each="el: ${article}" class="alert alert-info mt-2">
-        <h3 th:text="${el.subject}+ . + ${el.FIO}"></h3>
-        <a th:href="'/blog' + ${el.id}" class="btn btn-warning">Get More</a>
+<body>
+<header class="header">
+    <h3 class="sm">@GammaTechnology</h3>
+    <button class="button" href="/signIn">Sign In</button>
+</header>
+<main>
+    <h1> Articles </h1>
+    <div class="wrapper">
+        <div th:each="el: ${article}" class="blog"><br>
+            <h3 th:text="${el.subject}+ . + ${el.FIO}"></h3><br>
+            <a th:href="'/blog' + ${el.id}" class="btn">Get More</a>
+        </div>
     </div>
- </div>
- </body>
+</main>
+<footer class="footer">
+    <div class="year"><b>@2020</b></div>
+</footer>
+</body>
 </html>

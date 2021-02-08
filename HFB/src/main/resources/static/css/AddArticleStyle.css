@@ -1,0 +1,105 @@
+.header{
+    display: flex ;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    background: aquamarine;
+    width: 100%;
+    height: 10%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    border-bottom: 2px solid black;
+
+}
+main{
+    display:block;
+    block-size: 850px;
+    width: 50%;
+    background-color: rgba(255, 250, 240,0.9);
+    box-shadow: 0 0 10px 5px cyan;
+    margin-right: 25%;
+    margin-left: 25%;
+    padding-top: 5%;
+}
+body{
+    background-image: url(/img/mgke.png);
+}
+.add{
+    display: block;
+    block-size: 850px;
+    box-shadow:  0 0 10px 5px cyan;
+}
+.form{
+    display:block;
+    block-size: 700px ;
+    border: 2px solid;
+    background-color:darkmagenta;
+    border-radius: 10px;
+    width:70%;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-top: 8%;
+
+}
+.input{
+    margin-top: 20%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input input{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 61%;
+    border: 2px solid;
+    border-radius: 10px;
+    padding-left: 3px;
+}
+.input textarea{
+    width :60%;
+    height: 40%;
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 5px 5px 5px 5px ;
+}
+.input textarea:focus{
+    box-shadow: 0 0 10px 5px cyan;
+}
+.input input:focus{
+    box-shadow: 0 0 10px 5px cyan;
+}
+.input .btn{
+    margin-top: 20px;
+}
+.input .btn:hover{
+    background-color: cyan;
+    color:darkmagenta;
+    border:10px solid cyan;
+    border-radius: 10px;
+}
+.input h3{
+    color:cyan;
+    font-size: large;
+}
+
+.footer{
+    margin-top: 90%;
+    display: flex;
+    position: fixed;
+    background: aquamarine;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 5%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.year{
+    font-size: large;
+    color: rebeccapurple;
+
+}

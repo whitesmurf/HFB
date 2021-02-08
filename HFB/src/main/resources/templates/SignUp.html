@@ -1,33 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Sing up</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="" th:href="@{/css/SignUpStyle.css}">
 </head>
 <body>
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-    <h5 class="my-0 mr-md-auto font-weight-normal">GammaTechnology</h5>
-</div>
-</div>
-<form  method="post" action="/signUp">
-    <div align="center"  class="container mt-5 mb-5">
-        <h1  >Please sign Up</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input  type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="password" class="sr-only">Password</label>
-        <input class="form-control" id="password" name="password" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;" placeholder="Password" required>
-        <!--<label for="password_two" class="sr-only">Password</label>
-        <input class="form-control" id="password_two" name="password_two" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="Verify Password" required>
-        --><label  class="sr-only">User Name</label>
-        <input  type="text" name="UserName" class="form-control" placeholder="UserName" required autofocus>
+<header class="header">
+    <p class="sm"><b>@GammaTechnology</b></p>
+</header>
+<main>
+    <form  method="post" action="/signUp" class="form">
+        <div   class="wrap">
+            <h1  >Please sign Up</h1>
+            <input  type="email" name="email" id="inputEmail" class="email" placeholder="Email address" required autofocus>
+            <input class="form-control" id="password" name="password" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;" placeholder="Password" required>
+            <input class="form-control" id="password_two" name="password_two" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="Verify Password" required>
+            <input  type="text" name="UserName" class="UserName" placeholder="UserName" required autofocus>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit"  >Sign Up</button>
-
-
-
-    </div>
-</form>
-<div  ><p align="center">&copy; GammaTechnology</p></div>
+            <button class="btn" type="submit"  >Sign Up</button>
+        </div>
+    </form>
+</main>
+<footer class="footer">
+    <div class="year">@2020</div>
+</footer>
 </body>
 </html>

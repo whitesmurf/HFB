@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <title>HFB Sing In </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/SignInStyle.css}">
 </head>
 <body>
+<header class="header">
+    <p class="sm">@GammaTechnology</p>
+</header>
+<main>
+    <form   action="/login" method="post">
+        <div  class="form">
+            <h3  >Please sign in</h3>
 
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-<h5 class="my-0 mr-md-auto font-weight-normal">GammaTechnology</h5>
-</div>
-<div class="container mt-5 mb-5">
-
-</div>
-<form   action="/login" method="post">
-    <div align="center"  class="container mt-5 mb-5">
-        <h1  >Please sign in</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input  type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
+            <input  type="email" id="inputEmail" name="email" class="emailIn" placeholder="Email address" required autofocus>
+            <input type="password" id="inputPassword" name="password" class="passwordIn" placeholder="Password" required>
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me" class="checkbox"> Remember me
+                </label>
+            </div>
+            <a href="/singUp"><i>Sing Up</i></a>
+            <button class="btn" type="submit">Sign in</button>
         </div>
-        <a href="/singUp"><i>Sing Up</i></a>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    </div>
-</form>
-<div  ><p align="center">&copy; GammaTechnology</p></div>
+    </form>
+</main>
+<footer class="footer">
+    <div class="year">@2020</div>
+</footer>
 </body>
 </html>
