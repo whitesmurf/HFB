@@ -4,12 +4,14 @@ import com.HelpForBlind.HFB.Controllers.Reposytoties.BlindUsersRepos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@CrossOrigin(value = "*", methods = {RequestMethod.GET, RequestMethod.POST})
 public class SingInController {
-    private String error="";
     private final BlindUsersRepos blindUsersRepos;
 
     @Autowired
@@ -17,16 +19,16 @@ public class SingInController {
         this.blindUsersRepos = blindUsersRepos;
     }
 
-    @RequestMapping(value = "/signIn",method = RequestMethod.GET)
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
     public String signIn(){
-        return "SingIn";
+        return "SignIn";
     }
 
-    @RequestMapping(value= "/signIn",method = RequestMethod.POST)
-    public String signInPost(String email,String password){
-        System.out.println(blindUsersRepos.findBlindUsersByEmail(email).get().getEmail());
+    @RequestMapping(value= "/login" +
+            "",method = RequestMethod.POST)
+    public String signInPost(@RequestParam String email, @RequestParam String password){
+        System.out.println("Found");
         if(blindUsersRepos.findBlindUsersByEmail(email).isPresent() && blindUsersRepos.findBlindUsersByEmail(email).get().getPassword().equals(password))return"redirect:/Cabinet";
-        else { error ="Invalid username or password" ;
-            return "redirect:/signIn" ;}
+        return "/SignIn";
     }
 }
