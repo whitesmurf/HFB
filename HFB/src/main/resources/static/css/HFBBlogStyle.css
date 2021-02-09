@@ -39,13 +39,16 @@ main{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 10%;
 }
 .blog{
     display: block;
-    background-color: rgba(139, 0, 139,0.5);
-    border: 3px solid rgba(0, 255, 255,0.5);
+    background-color:cyan;
+    border: 3px solid darkmagenta;
     border-radius: 5px;
+    margin-top: 20px;
+    padding:10px;
 
 }
 main h1{
@@ -71,4 +74,15 @@ main h1{
     font-size: large;
     color: rebeccapurple;
 
+}
+.button{
+    display: block;
+    background-color: yellow;
+    color: red;
+    text-align: center;
+    padding: 10px;
+    width: 100px ;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 15px;
 }

@@ -59,4 +59,18 @@ public class BlindUserDetails implements UserDetails {
     public boolean isEnabled() {
         return isActive;
     }
+
+
+    public static UserDetails fromUser(BlindUsers blindUser){
+        return new org.springframework.security.core.userdetails.User(
+                blindUser.getEmail(),
+                blindUser.getPassword(),
+                blindUser.getStatus().equals((Status.ACTIVE)),
+                blindUser.getStatus().equals((Status.ACTIVE)),
+                blindUser.getStatus().equals((Status.ACTIVE)),
+                blindUser.getStatus().equals((Status.ACTIVE)),
+                blindUser.getRole().getAuthorities()
+        );
+
+    }
 }

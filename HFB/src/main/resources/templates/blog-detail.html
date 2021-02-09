@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title> articles </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="" th:href="@{/css/HFBBlogDetailStyle.css}">
 </head>
 <body>
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-    <h5 class="my-0 mr-md-auto font-weight-normal">GammaTechnology</h5>
-</div>
-<div class="container mt-5">
-    <h1 th:each="el: ${articles}" th:text="'Статья:'+${el.subject}+ . + ${el.FIO}"></h1>
-
-    <div th:each="el: ${articles}" class="container mt-5 mb-5">
-        <p th:text="${el.text}"></p>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Add to Android</button>
-    </div>
-</div>
+<header class="header">
+    <h3 class="sm">@GammaTechnology</h3>
+    <a class="link" href="/blog">Articles</a>
+    <button class="button" type="button" href="/login">Sign In</button>
+</header>
+<main>
+    <div class="container">
+        <h1 th:each="el: ${articles}" th:text="'Статья:'+${el.subject}+ . + ${el.FIO}"></h1>
+        <div th:each="el: ${articles}" >
+            <p th:text="${el.topic}"></p>
+            <p th:text="${el.text}"></p>
+            <a href="/blog" >Go back.</a>
+        </div>
+       </div>
+</main>
+<footer class="footer">
+    <div class="year"><b>@2020</b></div>
+</footer>
 </body>
 </html>

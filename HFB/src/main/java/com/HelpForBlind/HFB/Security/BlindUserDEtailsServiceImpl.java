@@ -21,9 +21,8 @@ public class BlindUserDEtailsServiceImpl implements UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        Optional<BlindUsers> blindUser = BLindUserRepository.findBlindUsersByEmail(email);
-        blindUser.orElseThrow(() -> new UsernameNotFoundException(email));
-        return blindUser.map(BlindUserDetails::new).get();
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        BlindUsers blindUser = BLindUserRepository.findBlindUsersByUsername(username).orElseThrow(() -> new UsernameNotFoundException("user do not exist"));
+        return BlindUserDetails.fromUser(blindUser);
     }
 }

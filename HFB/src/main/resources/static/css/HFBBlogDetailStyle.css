@@ -19,12 +19,9 @@ body{
     background-repeat:  space repeat;
 }
 .sm{
-    margin-right: 72% ;
+    margin-right: 80% ;
     font-size: larger;
     color :darkmagenta;
-}
-.link{
-    margin-right: 10px;
 }
 main{
     display: block;
@@ -32,25 +29,31 @@ main{
     block-size: 1500px;
     margin-right: 15%;
     margin-left: 15%;
-    width: 60%;
+    width: 50%;
     box-shadow: 0 0 10px 4px cyan;
     padding-top: 10%;
     padding-left: 10%;
+    padding-right: 10%;
 }
-main .information{
-    display:flex;
+main h1{
+    text-align: center;
+    font-size: larger;
+    color:darkmagenta;
+}
+.container{
+    display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    justify-content: center;
-
-}
-form .btn{
-    background-color: yellow;
-    color: red;
-    width: 100% ;
-    height: 30px;
-    border: 2px solid black;
-    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90% ;
+    background: cyan;
+    padding: 5% 5% 5% 5%;
+    border: 2px solid darkmagenta;
+    border-radius: 5px;
+    max-height: 550px;
+    overflow:auto;
 }
 .footer{
     margin-top: 90%;
@@ -69,4 +72,21 @@ form .btn{
     font-size: large;
     color: rebeccapurple;
 
+}
+.container a{
+    background-color:darkorchid;
+    color: cyan;
+    border:10px solid darkorchid;
+    border-radius: 10px;
+}
+.header button{
+    background-color: yellow;
+    color: red;
+    width: 5% ;
+    height: 40%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.link{
+    margin-right: 10px;
 }

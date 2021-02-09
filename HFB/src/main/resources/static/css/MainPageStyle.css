@@ -51,17 +51,20 @@ body{
 
 }
 .sm{
-    margin-right: 80% ;
+    margin-right: 60% ;
     font-size: larger;
     color :darkmagenta;
 }
-button{
+.button{
+    display: block;
     background-color: yellow;
     color: red;
-    width: 5% ;
-    height: 40%;
+    text-align: center;
+    padding: 10px;
+    width: 100px ;
+    height: 30px;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .link{
     margin-right: 10px;

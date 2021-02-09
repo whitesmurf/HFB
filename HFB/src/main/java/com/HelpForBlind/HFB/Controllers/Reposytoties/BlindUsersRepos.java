@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.Optional;
 
 public interface BlindUsersRepos extends CrudRepository<BlindUsers,Long> {
-    Optional<BlindUsers> findBlindUsersByEmail(String email);
+    Optional<BlindUsers> findBlindUsersByUsername(String username);
 }
