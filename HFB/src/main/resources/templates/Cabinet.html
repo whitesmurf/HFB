@@ -6,27 +6,37 @@
     <link rel="stylesheet" href="" th:href="@{/css/HFBCabinetStyle.css}">
 </head>
 <body>
-<header class="header">
-    <h3 class="sm">@GammaTechnology</h3>
-    <a class="link" href="/blog">Articles</a>
-    <a class="link" href="/blog/add">Add Article</a>
-    <form action="logout" method="post">
-        <button class="btn" type="submit">logout</button>
-    </form>
+<header>
+    <div class="sm">
+        <img src="" th:src="@{/img/sm_full.aspx.jpeg}" alt="">
+    </div>
 </header>
+<div class="buttons">
+    <a href="#"><button>edit</button></a>
+    <a href="/add"><button>add articles</button></a>
+    <a href="/blog"><button>articles</button></a>
+    <form action="/logout" method="post"><button type="submit">logout</button></form>
+</div>
 <main>
-    <div class="information">
-        <div class="about">
-            <p>Name:</p>
-            <p>Surmane:</p>
-            <p>Email:</p>
-            <p>Role:</p>
-            <p>Status:</p>
+    <div class="wrapeer">
+        <div class="wrap">
+            <div class="info">
+                <div class="image">
+                </div>
+                <div class="information">
+                    <p>Name:</p>
+                    <p>Surname:</p>
+                    <p>Email:</p>
+                    <p>Status:</p>
+                </div>
+            </div>
         </div>
     </div>
 </main>
-<footer class="footer">
-    <div class="year"><b>@2020</b></div>
+<footer>
+    <div class="year">
+        @2020
+    </div>
 </footer>
 </body>
 </html>

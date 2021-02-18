@@ -6,28 +6,33 @@
     <link rel="stylesheet" th:href="@{/css/SignInStyle.css}">
 </head>
 <body>
-<header class="header">
-    <p class="sm">@GammaTechnology</p>
+<header>
+    <div class="sm">
+        <img src="" th:src="@{/img/sm_full.aspx.jpeg}" alt="">
+    </div>
 </header>
+<div class="buttons">
+    <a href="/homepage"><button>main</button></a>
+    <a href="/add"><button>add articles</button></a>
+    <a href="/blog"><button>articles</button></a>
+    <a href="#"><button>information</button></a>
+</div>
 <main>
     <form   action="/login" method="post">
         <div  class="form">
             <h3  >Please sign in</h3>
 
-            <input  type="text" id="inputEmail" name="username" class="emailIn" placeholder="User Name" required autofocus>
+            <input  type="text" id="inputUserName" name="username"  placeholder="username" required autofocus>
             <input type="password" id="inputPassword" name="password" class="passwordIn" placeholder="Password" required>
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me" class="checkbox"> Remember me
-                </label>
-            </div>
-            <a href="/singUp"><i>Sing Up</i></a>
+            <a href="/signUp"><i>Sing Up</i></a>
             <button class="btn" type="submit">Sign in</button>
         </div>
     </form>
 </main>
-<footer class="footer">
-    <div class="year">@2020</div>
+<footer>
+    <div class="year">
+        @2020
+    </div>
 </footer>
 </body>
 </html>

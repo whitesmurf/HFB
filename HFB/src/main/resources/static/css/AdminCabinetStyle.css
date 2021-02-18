@@ -55,7 +55,7 @@ footer{
     width: inherit;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
 }
-.buttons a {
+.buttons a,.buttons form {
     height: 3vh;
     width:25vh;
     display: flex;
@@ -65,7 +65,7 @@ footer{
     border:1px solid rgba(0,0,0,0.5);
     text-decoration: none;
 }
-.buttons a button{
+.buttons a button,.buttons form button{
     width: inherit;
     height: inherit;
     border-radius: inherit;
@@ -73,7 +73,7 @@ footer{
     background-color: rgb(130, 223, 223);
     border:1px solid rgba(0,0,0,0.5);
 }
-.buttons a button:hover{
+.buttons a button:hover,.buttons form button:hover{
     cursor: pointer;
     background-color: whitesmoke;
     box-shadow: 20px 20px 20px rgba(0, 238, 255, 0.7);

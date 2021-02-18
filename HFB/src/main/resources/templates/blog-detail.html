@@ -6,23 +6,31 @@
     <link rel="stylesheet" href="" th:href="@{/css/HFBBlogDetailStyle.css}">
 </head>
 <body>
-<header class="header">
-    <h3 class="sm">@GammaTechnology</h3>
-    <a class="link" href="/blog">Articles</a>
-    <button class="button" type="button" href="/login">Sign In</button>
+<header>
+    <div class="sm">
+        <img src="" th:src="@{/img/sm_full.aspx.jpeg}" alt="">
+    </div>
 </header>
+<div class="buttons">
+    <a href="/homepage"><button>main</button></a>
+    <a href="/Cabinet"><button>cabinet</button></a>
+    <a href="/add"><button>add article</button></a>
+    <a href="/login"><button>sign in</button></a>
+</div>
 <main>
     <div class="container">
-        <h1 th:each="el: ${articles}" th:text="'Статья:'+${el.subject}+ . + ${el.FIO}"></h1>
+        <h1 th:each="el: ${articles}" th:text="'Статья:'+${el.subject}+ . + ${el.FIO}">something</h1>
         <div th:each="el: ${articles}" >
             <p th:text="${el.topic}"></p>
             <p th:text="${el.text}"></p>
-            <a href="/blog" >Go back.</a>
+            <a href="/blog"><button>Go back.</button></a>
         </div>
-       </div>
+    </div>
 </main>
-<footer class="footer">
-    <div class="year"><b>@2020</b></div>
+<footer>
+    <div class="year">
+        @2020
+    </div>
 </footer>
 </body>
 </html>

@@ -2,8 +2,9 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title> Homepage </title>
-    <link rel="stylesheet" href=""  th:href="@{/css/MainPageStyle.css}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="" th:href="@{/css/AdminCabinetStyle.css}">
+    <title>Admin Cabinet</title>
 </head>
 <body>
 <header>
@@ -12,10 +13,10 @@
     </div>
 </header>
 <div class="buttons">
-    <a href="/Cabinet"><button>cabinet</button></a>
+    <a href=""><button>edit</button></a>
     <a href="/add"><button>add articles</button></a>
     <a href="/blog"><button>articles</button></a>
-    <a href="/login"><button>sign in</button></a>
+    <form action="logout" method="post"><button type="submit">logout</button></form>
 </div>
 <main>
 

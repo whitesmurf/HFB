@@ -16,7 +16,7 @@ public class AddController  {
         this.articlesRepos = articlesRepos;
     }
 
-    @GetMapping("/blog/add")
+    @GetMapping("/add")
     public String Add(){
         return "Add";
     }

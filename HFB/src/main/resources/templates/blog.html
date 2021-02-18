@@ -6,21 +6,30 @@
     <link rel="stylesheet" href="" th:href="@{/css/HFBBlogStyle.css}">
 </head>
 <body>
-<header class="header">
-    <h3 class="sm">@GammaTechnology</h3>
-    <a class="button" href="/login">Sign In</a>
+<header>
+    <div class="sm">
+        <img src="" th:src="@{/img/sm_full.aspx.jpeg}" alt="">
+    </div>
 </header>
+<div class="buttons">
+    <a href="/homepage"><button>main</button></a>
+    <a href="/add"><button>add articles</button></a>
+    <a href="/blog"><button>articles</button></a>
+    <a href="#"><button>information</button></a>
+</div>
 <main>
     <h1> Articles </h1>
     <div class="wrapper">
         <div th:each="el: ${article}" class="blog"><br>
             <h3 th:text="${el.subject}+ . + ${el.FIO}"></h3><br>
-            <a th:href="'/blog' + ${el.id}" class="btn">Get More</a>
+            <a th:href="'/blog/' + ${el.id}" class="btn">Get More</a>
         </div>
     </div>
 </main>
-<footer class="footer">
-    <div class="year"><b>@2020</b></div>
+<footer>
+    <div class="year">
+        @2020
+    </div>
 </footer>
 </body>
 </html>

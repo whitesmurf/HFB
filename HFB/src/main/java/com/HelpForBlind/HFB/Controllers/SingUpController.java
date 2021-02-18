@@ -6,7 +6,6 @@ import com.HelpForBlind.HFB.Enums.Status;
 import com.HelpForBlind.HFB.Services.BlindUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.MediaType;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -33,7 +32,7 @@ public class SingUpController {
 
     @RequestMapping(value = "/signUp" , method = RequestMethod.POST)
     public String AddUser(@RequestParam String UserName,@RequestParam String password,@RequestParam String email){
-       BlindUsers BlindUser = new BlindUsers(UserName,password,email,Role.ADMIN,Status.ACTIVE);
+       BlindUsers BlindUser = new BlindUsers(UserName,password,email,Role.USER,Status.ACTIVE);
         blindUserService.registerUser(BlindUser);
         SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(BlindUser.getUsername(),BlindUser.getPassword(), List.of(new SimpleGrantedAuthority(BlindUser.getRole().name()))));
         return"Main";

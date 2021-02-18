@@ -6,9 +6,17 @@
     <link rel="stylesheet" href="" th:href="@{/css/SignUpStyle.css}">
 </head>
 <body>
-<header class="header">
-    <p class="sm"><b>@GammaTechnology</b></p>
+<header>
+    <div class="sm">
+        <img src="" th:src="@{/img/sm_full.aspx.jpeg}" alt="">
+    </div>
 </header>
+<div class="buttons">
+    <a href="/homepage"><button>main</button></a>
+    <a href="/add"><button>add articles</button></a>
+    <a href="/blog"><button>articles</button></a>
+    <a href="#"><button>information</button></a>
+</div>
 <main>
     <form  method="post" action="/signUp" class="form">
         <div   class="wrap">
@@ -22,8 +30,10 @@
         </div>
     </form>
 </main>
-<footer class="footer">
-    <div class="year">@2020</div>
+<footer>
+    <div class="year">
+        @2020
+    </div>
 </footer>
 </body>
 </html>

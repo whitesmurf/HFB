@@ -38,7 +38,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/signUp").permitAll()
                 .antMatchers(HttpMethod.POST, "/login**" ).permitAll()
                 .antMatchers(HttpMethod.GET, "/login**").permitAll()
-                .antMatchers("/blog{id}").permitAll()
+                .antMatchers("/blog/{id}").permitAll()
                 .antMatchers("/css/**").permitAll()
                 .antMatchers("/img/**").permitAll()
                 .antMatchers("/blog").permitAll()
@@ -52,7 +52,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout","POST"))
-                .logoutSuccessUrl("/")
+                .logoutSuccessUrl("/homepage")
                 .invalidateHttpSession(true)
                 .clearAuthentication(true)
                 .deleteCookies("JSESSIONID");

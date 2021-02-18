@@ -1,105 +1,126 @@
-.header{
-    display: flex ;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    position: fixed;
-    background: aquamarine;
-    width: 100%;
-    height: 10%;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    border-bottom: 2px solid black;
-
-}
-main{
-    display:block;
-    block-size: 850px;
-    width: 50%;
-    background-color: rgba(255, 250, 240,0.9);
-    box-shadow: 0 0 10px 5px cyan;
-    margin-right: 25%;
-    margin-left: 25%;
-    padding-top: 5%;
+*{
+    margin :0px;
+    padding:0px;
+    box-sizing: border-box;
 }
 body{
-    background-image: url(/img/mgke.png);
-}
-.add{
-    display: block;
-    block-size: 850px;
-    box-shadow:  0 0 10px 5px cyan;
-}
-.form{
-    display:block;
-    block-size: 700px ;
-    border: 2px solid;
-    background-color:darkmagenta;
-    border-radius: 10px;
-    width:70%;
-    margin-right: 15%;
-    margin-left: 15%;
-    margin-top: 8%;
-
-}
-.input{
-    margin-top: 20%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.input input{
-    margin-top: 5px;
-    margin-bottom: 10px;
-    width: 61%;
-    border: 2px solid;
-    border-radius: 10px;
-    padding-left: 3px;
-}
-.input textarea{
-    width :60%;
-    height: 40%;
-    border: 2px solid;
-    border-radius: 15px;
-    padding: 5px 5px 5px 5px ;
-}
-.input textarea:focus{
-    box-shadow: 0 0 10px 5px cyan;
-}
-.input input:focus{
-    box-shadow: 0 0 10px 5px cyan;
-}
-.input .btn{
-    margin-top: 20px;
-}
-.input .btn:hover{
-    background-color: cyan;
-    color:darkmagenta;
-    border:10px solid cyan;
-    border-radius: 10px;
-}
-.input h3{
-    color:cyan;
-    font-size: large;
-}
-
-.footer{
-    margin-top: 90%;
+header{
+    width:100vh;
+    height: 15vh;
     display: flex;
-    position: fixed;
-    background: aquamarine;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 5%;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:rgb(130, 223, 223);
+    color: whitesmoke;
+    font-size: 20px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+header .sm img{
+    width:inherit;
+    height:inherit;
+}
+header .sm{
+    width: inherit;
+    height: inherit;
+}
+main{
+    height: 75vh;
+    width:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vh;
+    background-color: white;
+    border: 1px solid gray;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+footer{
+    height: 7vh;
+    width:100vh;
+    display:flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
+    color: black;
+    background-color:rgb(103, 218, 218);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+    border: 1px solid gray;
+    position: static;
 }
-.year{
-    font-size: large;
-    color: rebeccapurple;
-
+.buttons{
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+.buttons a {
+    height: 3vh;
+    width:25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    border:1px solid rgba(0,0,0,0.5);
+    text-decoration: none;
+}
+.buttons a button{
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    font-size: 20px;
+    background-color: rgb(130, 223, 223);
+    border:1px solid rgba(0,0,0,0.5);
+}
+.buttons a button:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+form{
+    width: 80vh;
+    height: 60vh;
+    display: flex;
+    background-color:whitesmoke;
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+form .input{
+    width: inherit;
+    height: inherit;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+form .input h3{
+    text-align: center;
+}
+form .input input{
+    padding: 3px;
+    height: 30px;
+    border: 2px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+form .input textarea{
+    padding: 3px;
+    min-height: 100px;
+    border: 2px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+form .input button{
+    height: 30px;
+    background-color: rgb(130, 223, 223);
+    border: 2px solid rgb(130, 223, 223);
+    border-radius: 7px;
+}
+form .input button:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+    border: 2px solid  rgba(0,0,0,0.5);
 }

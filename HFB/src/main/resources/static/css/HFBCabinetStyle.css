@@ -1,72 +1,116 @@
-.header{
-    display: flex ;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    position: fixed;
-    background: aquamarine;
-    width: 100%;
-    height: 10%;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    border-bottom: 2px solid black;
-
+*{
+    margin :0px;
+    padding:0px;
+    box-sizing: border-box;
 }
 body{
-    background-image: url(/img/mgke.png) ;
-    background-size: 15%;
-    background-repeat:  space repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.sm{
-    margin-right: 72% ;
-    font-size: larger;
-    color :darkmagenta;
+header{
+    width:100vh;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:rgb(130, 223, 223);
+    color: whitesmoke;
+    font-size: 20px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
 }
-.link{
-    margin-right: 10px;
+header .sm img{
+    width:inherit;
+    height:inherit;
+}
+header .sm{
+    width: inherit;
+    height: inherit;
 }
 main{
-    display: block;
-    background-color: cornsilk;
-    block-size: 1500px;
-    margin-right: 15%;
-    margin-left: 15%;
-    width: 60%;
-    box-shadow: 0 0 10px 4px cyan;
-    padding-top: 10%;
-    padding-left: 10%;
-}
-main .information{
+    height: 75vh;
+    width:100vh;
+    padding:5vh;
     display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    border: 1px solid gray;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
 }
-form .btn{
-    background-color: yellow;
-    color: red;
-    width: 100% ;
-    height: 30px;
-    border: 2px solid black;
-    border-radius: 10px;
-}
-.footer{
-    margin-top: 90%;
-    display: flex;
-    position: fixed;
-    background: aquamarine;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 5%;
-    flex-direction: row;
+footer{
+    height: 7vh;
+    width:100vh;
+    display:flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
+    color: black;
+    background-color:rgb(103, 218, 218);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+    border: 1px solid gray;
+    position: static;
 }
-.year{
-    font-size: large;
-    color: rebeccapurple;
-
+.buttons{
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+.buttons a , .buttons form{
+    height: 3vh;
+    width:25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    border:1px solid rgba(0,0,0,0.5);
+    text-decoration: none;
+}
+.buttons a button ,.buttons form button{
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    font-size: 20px;
+    background-color: rgb(130, 223, 223);
+    border:1px solid rgba(0,0,0,0.5);
+}
+.buttons a button:hover,.buttons form button{
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+main .info{
+    width: 25vh;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+main .info .image{
+    width:10rem;
+    height:10rem;
+    border-radius: 50%;
+    background-color: lightblue;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+}
+main .info .information{
+    width:inherit;
+    height: 24vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5px;
+}
+.wrapeer .wrap{
+    background-color: whitesmoke;
+    width:90vh;
+    height:50vh;
+    display: flex;
+    border-radius: 30px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
 }

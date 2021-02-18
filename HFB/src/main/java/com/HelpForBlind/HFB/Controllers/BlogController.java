@@ -27,7 +27,7 @@ public class BlogController {
             model.addAttribute("article",article);
             return "blog";
         }
-    @GetMapping("/blog{id}")
+    @GetMapping("/blog/{id}")
     public String blogDetail(@PathVariable(value = "id") long id,Model model){
         Optional<Articles> article =articlesRepos.findById(id);
         ArrayList<Articles> result = new ArrayList<>();
